@@ -3,7 +3,7 @@
 
 Build | Code Quality | Unity | [Git Inspector](using github.io option)
 ------|----------|-------|--------------
-[![C/C++ CI](mylink)](mylink) | [![Static Cppcheck](mylink)](mylink) [![Dynamic Valgrind](mylink)](mylink)| [![Unity - Unit Testing](mylink)](mylink)| [![Git Inspector](mylink)](mylink)
+[![C/C++ CI](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/c-cpp.yml) | [![Static Cppcheck](mylink)](mylink) [![Dynamic Valgrind](mylink)](mylink)| [![Unity - Unit Testing](mylink)](mylink)| [![Git Inspector](mylink)](mylink)
 
 
 ## Folder Structure
