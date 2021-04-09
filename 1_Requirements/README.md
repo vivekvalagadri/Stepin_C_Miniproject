@@ -1,7 +1,6 @@
 # Requirement
 ## Introduction
- 	Poker is a game wherein players bet on the cards they have along with the cards 
- 	on the table (total 5) in order to make the best hand.
+ 	Poker is a game wherein players bet on the cards they have along with the cards on the table (total 5) in order to make the best hand.
  	The Requirement of this project is to print the type of hand when provided with 5 cards.    
 
 ## Ageing: Cost and Features
@@ -15,19 +14,19 @@
 # 4W&#39;s and 1&#39;H
 
 ## Who:
-Poker Players
+	Poker Players
 
 ## What:
-Prints the type of hand 
+	Prints the type of hand 
 
 ## When:
-Whenever the player needs help to get the type of hand
+	Whenever the player needs help to get the type of hand
 
 ## Where:
-Poker Table/ Home/ any other area of recreation
+	Poker Table or Home or any other area of recreation
 
 ## How:
-By Providing the 5 cards as input
+	By Providing the 5 cards as input
 
 # Detail requirements
 ## High Level Requirements: 
