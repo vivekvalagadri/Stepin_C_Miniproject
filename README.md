@@ -1,5 +1,5 @@
 # Poker Hands
-### Shows the best Poker hand when provided with 5 cards
+### Shows the type of Poker hand when provided with 5 cards
 
 Build | Code Quality | Unity | [Git Inspector](using github.io option)
 ------|----------|-------|--------------
