@@ -6,4 +6,4 @@ $(FILE):main.c ./src/poker.c
 	gcc -o $@ $^
 
 clean:
-	rm -rf *.out 
+	rm -rf *.out
