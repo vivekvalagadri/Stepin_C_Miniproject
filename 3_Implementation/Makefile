@@ -17,4 +17,4 @@ $(BIN)/poker.o:$(SRC)/poker.c $(INC)/poker.h
 	gcc -o $(BIN)/poker.o -c $(SRC)/poker.c
 
 clean:
-	rm -rf *.out $(BIN)/*
+	rm -rf *.out $(BIN)/*.o
