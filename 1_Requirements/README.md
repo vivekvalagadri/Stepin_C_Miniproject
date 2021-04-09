@@ -1,44 +1,37 @@
-# Requirements
+# Requirement
 ## Introduction
- --- TBD 
+ 	Poker is a game wherein players bet on the cards they have along with the cards on the table (total 5) in order to make the best hand.
+ 	The Requirement of this project is to print the type of hand when provided with 5 cards.    
 
-## Research
-![Description](Link to Pic)
--- Content 
-## Cost and Features
-![Description](Link to Pic)
--- Content 
+## Ageing: Cost and Features
+	Feature Evolution:1 Week
+	Cost: Free of Cost
 ## Defining Our System
-    -- TBD
+    Print the type of Poker hand when provided with 5 cards
 ## SWOT ANALYSIS
-![SWOT-Sample](Link to Pic)
+![SWOT](https://i.ibb.co/JvyxB0T/SWOT.png)
 
 # 4W&#39;s and 1&#39;H
 
 ## Who:
-
-**TBD**
+Poker Players
 
 ## What:
-
-**TBD**
+Prints the type of hand 
 
 ## When:
-
-**TBD**
+Whenever the player needs help to get the type of hand
 
 ## Where:
-
-**TBD**
+Poker Table/ Home/ any other area of recreation
 
 ## How:
-
-**TBD**
+By Providing the 5 cards as input
 
 # Detail requirements
-## High Level Requirements:
---- TBD in Tabular Format 
--- ID | Description | Status (Implemented/Future)
+## High Level Requirements: 
+ID | Description | Status (Implemented/Future)
+01 | Prints the type of hand when provided with 5 cards | Implemented
 
 
 ##  Low level Requirements:
