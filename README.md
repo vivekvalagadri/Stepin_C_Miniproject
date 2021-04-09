@@ -1,6 +1,5 @@
-# SDLC Activity Based Learning
-
-Visit [Pages for Report -optional](using github.io option)
+# Poker Hands
+### Shows the best Poker hand when provided with 5 cards
 
 Build | Code Quality | Unity | [Git Inspector](using github.io option)
 ------|----------|-------|--------------
