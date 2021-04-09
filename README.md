@@ -1,6 +1,6 @@
 # Poker Hands
 ### Shows the type of Poker hand when provided with 5 cards
-![Poker Hands](https://drive.google.com/file/d/1zLp0bTS1PjXd5Ge9wNFgC8XqjOWFtY5n/view?usp=sharing)
+![Poker Hands](https://www.pokernews.com/img/rules/poker-hand-rankings_d.png)
 
 Build | Code Quality | Unity | [Git Inspector](using github.io option)
 ------|----------|-------|--------------
