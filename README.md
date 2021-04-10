@@ -2,10 +2,9 @@
 ### Shows the type of Poker hand when provided with 5 cards
 ![Poker Hands](https://www.pokernews.com/img/rules/poker-hand-rankings_d.png)
 
-Build | Code Quality | Unity | [Git Inspector](using github.io option)
+Build | Cppcheck | Valgrind | Unity
 ------|----------|-------|--------------
-[![C/C++ CI](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/c-cpp.yml) | [![Static Cppcheck](mylink)](mylink) [![Dynamic Valgrind](mylink)](mylink)| [![Unity - Unit Testing](mylink)](mylink)| [![Git Inspector](mylink)](mylink)
-
+[![C/C++ CI](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/c-cpp.yml) | [![cppcheck-action](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/cppcheck.yml) | [![Dynamic Valgrind](mylink)](mylink)| [![Unity - Unit Testing](mylink)](mylink)
 
 ## Folder Structure
 Folder             | Description
