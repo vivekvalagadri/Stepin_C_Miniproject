@@ -1,5 +1,5 @@
 # Poker Hands
-### Shows the type of Poker hand when provided with 5 cards  
+### Shows the type of Poker hand when provided with 5 cards 
 ![Poker Hands](https://www.pokernews.com/img/rules/poker-hand-rankings_d.png)
 
 Build | Cppcheck | Valgrind | Unity
