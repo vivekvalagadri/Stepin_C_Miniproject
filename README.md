@@ -4,7 +4,7 @@
 
 Build | Cppcheck | Valgrind | Unity
 ------|----------|-------|--------------
-[![C/C++ CI](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/c-cpp.yml) | [![cppcheck-action](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/cppcheck.yml) | [![Dynamic Valgrind](mylink)](mylink)| [![Unity - Unit Testing](mylink)](mylink)
+[![C/C++ CI](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/c-cpp.yml) | [![cppcheck-action](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/cppcheck.yml/badge.svg)](https://github.com/vivekvalagadri/Stepin_C_Miniproject/actions/workflows/cppcheck.yml) | [![Dynamic Valgrind](mylink)](mylink)| [![Unity - Unit Testing](mylink)](mylink) | [![Codacy Badge](https://app.codacy.com/project/badge/Grade/abd215d316704863ba1b0ccd256b5bf7)](https://www.codacy.com/gh/vivekvalagadri/Stepin_C_Miniproject/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=vivekvalagadri/Stepin_C_Miniproject&amp;utm_campaign=Badge_Grade)
 
 ## Folder Structure
 Folder             | Description
