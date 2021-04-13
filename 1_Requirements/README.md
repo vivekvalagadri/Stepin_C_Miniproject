@@ -36,5 +36,12 @@ ID  | Description         								| Status(Implemented/Future)
 
 
 ##  Low level Requirements:
---- TBD in Tabular Format 
--- ID | Description | Status (Implemented/Future)
+ID  | Description             | Status(Implemented/Future)
+--  | ----------------------- | --------------------------
+`1` | get_Input() Fucntion    | Implemented
+`2` | is_Duplicate() Fucntion | Implemented
+`3` | type_of_hand() Fucntion | Implemented
+`4` | is_flush() Fucntion     | Implemented
+`5` | is_straight() Fucntion  | Implemented
+`6` | count_ranks() Fucntion  | Implemented
+`5` | print_result() Fucntion | Implemented
