@@ -15,3 +15,15 @@ Folder             | Description
 `4_TestPlanAndOutput`      | Documents with test plans and procedures
 `5_Report`   | Report of the whole project
 `6_ImagesAndVideos`   | Images and Videos 
+
+
+#### Inspiration 
+This project has been ispired from the book C PROGRAMMING: A MODERN APPROACH, Second Edition By K. N. King, Chapter 10
+Whats Same: 
+* The Idea and Program Strcuture
+Whats Different:
+* Reimplemted the is_Straight function due to false logic 
+* Reimplementation using concepts taught in stepin
+	* Structures
+	* Pointers to Structures
+	* Dynamic Memory Allocation
