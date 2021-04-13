@@ -25,7 +25,7 @@ This project has been ispired from the book C PROGRAMMING: A MODERN APPROACH, Se
 
 ##### Whats Different:
 * Reimplemted the is_Straight function due to false logic 
-* Reimplementation using concepts taught in stepin
+* Reimplementation using concepts taught in StepIn
 	* Structures
 	* Pointers to Structures
 	* Dynamic Memory Allocation
