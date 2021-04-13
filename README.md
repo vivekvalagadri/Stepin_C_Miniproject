@@ -18,7 +18,7 @@ Folder             | Description
 
 
 #### Inspiration 
-This project has been ispired from the book C PROGRAMMING: A MODERN APPROACH, Second Edition By K. N. King, Chapter 10
+This project has been ispired from the book C Programming: A Modern Approach, Second Edition By K. N. King, Chapter 10
 
 ##### Whats Same: 
 * The Idea and Program Strcuture
