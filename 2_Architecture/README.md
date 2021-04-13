@@ -2,6 +2,6 @@
 
 ## Structural Diagram
 
-![Structural Diagram](https://i.ibb.co/ZxTJrc9/Untitled-Workspace.png)
+![Structural Diagram](https://i.ibb.co/Z2dH3Ck/stru.jpg)
 
 ## Behavioral Diagram 
