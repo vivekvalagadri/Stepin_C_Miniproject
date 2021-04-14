@@ -21,11 +21,10 @@ Folder             | Description
 This project has been ispired from the book C Programming: A Modern Approach, Second Edition By K. N. King, Chapter 10
 
 ##### Whats Same: 
-* The Idea and Program Strcuture
+* The Idea and Input Methodology
 
 ##### Whats Different:
-* Reimplemted the is_Straight function due to false logic 
-* Reimplementation using concepts taught in StepIn
+* Complete Reimplementation of all the functions/logic using concepts taught in StepIn
 	* Structures
 	* Pointers to Structures
 	* Dynamic Memory Allocation
