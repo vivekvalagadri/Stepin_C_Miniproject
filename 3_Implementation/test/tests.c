@@ -90,7 +90,7 @@ void onepair_test(void){
 	card c1[5]={{1,3},{2,5},{3,4},{4,4},{1,7}};
 	TEST_ASSERT_EQUAL(1,Pairs(c1));
 	//not a pair
-	card c2[5]={{1,3},{2,9},{3,6},{4,4},{1,7}};
+	card c2[5]={{1,11},{2,10},{3,6},{4,3},{1,8}};
 	TEST_ASSERT_EQUAL(0,Pairs(c2));
 	
 }
