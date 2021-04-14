@@ -4,6 +4,16 @@
 #include <stdlib.h>
 
 void get_Input(card* card_ptr){
+  int is_Duplicate(card * card_ptr,int r,int s){
+  int flag=0;
+  for(int i=0;i<NUM_OF_CARDS;i++){
+    if(s==(card_ptr+i)->suit && r==(card_ptr+i)->rank){
+      flag=1;
+      break;
+    }
+  }
+  return flag;
+  }
 	printf("Rank goes from 2,3,4....T,J,Q,K,A\n");
 	printf("Suits are C D H S\n");
 	printf("Example TC for Ten of Clubs\n");
@@ -53,106 +63,7 @@ void get_Input(card* card_ptr){
     }
   }  /* end hand */
 }
-
-int is_Duplicate(card * card_ptr,int r,int s){
-	int flag=0;
-	for(int i=0;i<NUM_OF_CARDS;i++){
-		if(s==(card_ptr+i)->suit && r==(card_ptr+i)->rank){
-			flag=1;
-			break;
-		}
-	}
-	return flag;
-}
-
-void type_of_hand(card *card_pointer, int* royal_flush, int* straight, int* flush, int* four, int* three, int* pairs){
-  int index, min_rank, max_rank, hash_pair;
-  int ranks_in_hand[NUM_OF_CARDS][2];
-
-  *flush = is_flush(card_pointer);
-
-  /* find the smallest and largest ranks */
-  max_rank = min_rank = card_pointer->rank;
-  for (index = 1; index < NUM_OF_CARDS; index++) {
-    if ((card_pointer+index)->rank < min_rank)
-      min_rank = (card_pointer+index)->rank;
-    if ((card_pointer+index)->rank > max_rank)
-      max_rank = (card_pointer+index)->rank;
-  }
-
-  /* difference will be 4 (for a 5 card hand) if they're all consecutive */
-  *straight =  is_straight(card_pointer);
-
-  /* if we're consecutive starting at 10, then max must be the Ace */
-  *royal_flush = *flush && *straight && min_rank == 10;
-
-  *four  = 0;
-  *three = 0;
-  *pairs = 0;
-
-  count_ranks(card_pointer, ranks_in_hand);
-  /* a hand can have from 1 to 5 ranks */
-
-  /* [> check for 4-of-a-kind, 3-of-a-kind, and pairs <] */
-  for (hash_pair = 0; hash_pair < NUM_OF_CARDS && ranks_in_hand[hash_pair][KEY] != 0; hash_pair++) {
-    if (ranks_in_hand[hash_pair][VALUE] == 4) *four = 1;
-    if (ranks_in_hand[hash_pair][VALUE] == 3) *three = 1;
-    /* if (ranks_in_hand[hash_pair][VALUE] == 2) *pairs++; */
-    /* above line with '*pairs++' fails to increment the value */
-    if (ranks_in_hand[hash_pair][VALUE] == 2) (*pairs)++;
-  }
-}
-
-int is_flush(card *card_pointer)
-{
-  /* check for flush: all of same suit */
-  for (int index = 1; index < NUM_OF_CARDS; index++)
-    if ((card_pointer)->suit != (card_pointer+index)->suit)
-      return 0;
-  return 1;
-}
-void swap(int* xp, int* yp)
-{
-    int temp = *xp;
-    *xp = *yp;
-    *yp = temp;
-}
-void sort_hand(card *card_pointer){
-  int i, j;
- 
-    // One by one move boundary of unsorted subarray
-    for (i = 0; i < NUM_OF_CARDS-1; i++) {
- 
-        // Find the minimum element in unsorted array
-        int min_idx = i;
-        for (j = i + 1; j < NUM_OF_CARDS; j++)
-            if (((card_pointer+j)->rank)< ((card_pointer+min_idx)->rank))
-                min_idx = j;
- 
-        // Swap the found minimum element
-        // with the first element
-        swap(&((card_pointer+min_idx)->rank), &((card_pointer+i)->rank));
-    }
-}
-int is_straight(card* card_pointer){
-  sort_hand(card_pointer);
-  if((card_pointer->rank)==2 && (card_pointer+4)->rank==14){
-    for(int i=0;i<3;i++){
-      if(((card_pointer+i+1)->rank)-((card_pointer+i)->rank)!=1)
-        return 0;
-    return 1;
-    }
-  }
-  else{
-    for(int i=0;i<4;i++){
-      if(((card_pointer+i+1)->rank)-((card_pointer+i)->rank)!=1)
-        return 0;
-    return 1;
-    }
-  }
-}
-void count_ranks(card *card_pointer, int ranks_in_hand[][2])
-{
+void count_ranks(card *card_pointer, int ranks_in_hand[][2]){
   int index, hash_pair;
 
   for (hash_pair = 0; hash_pair < NUM_OF_CARDS; hash_pair++)
@@ -181,17 +92,120 @@ void count_ranks(card *card_pointer, int ranks_in_hand[][2])
     ranks_in_hand[hash_pair][VALUE]++;
   }
 }
-void print_result(int royal_flush, int straight, int flush, int four, int three, int pairs){
-  if (royal_flush)       printf("Royal flush");
-  else if (straight && flush) printf("Straight flush");
-  else if (four)         printf("Four of a kind");
-  else if (three &&
-           pairs == 1)   printf("Full house");
-  else if (flush)        printf("Flush");
-  else if (straight)     printf("Straight");
-  else if (three)        printf("Three of a kind");
-  else if (pairs == 2)   printf("Two Pair");
-  else if (pairs == 1)   printf("One Pair");
-  else                   printf("High card");
-  printf("\n\n");
+/////////////////////////////////
+int is_RoyalFlush(card *card_pointer){
+  if(is_StraightFlush(card_pointer) && card_pointer->rank==10)
+    return 1;
+  return 0;
+}
+int is_StraightFlush(card *card_pointer){
+  if(is_Straight(card_pointer)&&is_Flush(card_pointer))
+    return 1;
+  return 0;
+}
+int is_Four_of_a_Kind(card *card_pointer){
+  int ranks_in_hand[NUM_OF_CARDS][2];
+  int hash_pair;
+  count_ranks(card_pointer, ranks_in_hand);
+  for (hash_pair = 0; hash_pair < NUM_OF_CARDS && ranks_in_hand[hash_pair][KEY] != 0; hash_pair++){
+    if (ranks_in_hand[hash_pair][VALUE] == 4) 
+      return 1;
+  }
+  return 0;
+}
+int is_FullHouse(card *card_pointer){
+  if(is_Three_of_a_Kind(card_pointer) && Pairs(card_pointer)==1)
+    return 1;
+  return 0;
+}
+int is_Flush(card *card_pointer){
+  /* check for flush: all of same suit */
+  for (int index = 1; index < NUM_OF_CARDS; index++)
+    if ((card_pointer)->suit != (card_pointer+index)->suit)
+      return 0;
+  return 1;
+}
+int is_Straight(card* card_pointer){
+  void swap(int* xp, int* yp){
+    int temp = *xp;
+    *xp = *yp;
+    *yp = temp;
+  }
+  void sort_hand(card *card_pointer){
+  int i, j;
+ 
+    // One by one move boundary of unsorted subarray
+    for (i = 0; i < NUM_OF_CARDS-1; i++) {
+ 
+        // Find the minimum element in unsorted array
+        int min_idx = i;
+        for (j = i + 1; j < NUM_OF_CARDS; j++)
+            if (((card_pointer+j)->rank)< ((card_pointer+min_idx)->rank))
+                min_idx = j;
+ 
+        // Swap the found minimum element
+        // with the first element
+        swap(&((card_pointer+min_idx)->rank), &((card_pointer+i)->rank));
+    }
+  }
+
+  sort_hand(card_pointer);
+  if((card_pointer->rank)==2 && (card_pointer+4)->rank==14){
+    for(int i=0;i<3;i++){
+      if(((card_pointer+i+1)->rank)-((card_pointer+i)->rank)!=1)
+        return 0;
+    return 1;
+    }
+  }
+  else{
+    for(int i=0;i<4;i++){
+      if(((card_pointer+i+1)->rank)-((card_pointer+i)->rank)!=1)
+        return 0;
+    return 1;
+    }
+  }
+}
+int is_Three_of_a_Kind(card *card_pointer){
+  int ranks_in_hand[NUM_OF_CARDS][2];
+  int hash_pair;
+  count_ranks(card_pointer, ranks_in_hand);
+  for (hash_pair = 0; hash_pair < NUM_OF_CARDS && ranks_in_hand[hash_pair][KEY] != 0; hash_pair++){
+    if (ranks_in_hand[hash_pair][VALUE] == 3) 
+      return 1;
+  }
+  return 0;
+}
+int Pairs(card *card_pointer){
+  int ranks_in_hand[NUM_OF_CARDS][2];
+  int hash_pair;
+  int count=0;
+  count_ranks(card_pointer, ranks_in_hand);
+  for (hash_pair = 0; hash_pair < NUM_OF_CARDS && ranks_in_hand[hash_pair][KEY] != 0; hash_pair++){
+    if (ranks_in_hand[hash_pair][VALUE] == 2) 
+      count++;
+  }
+  return count;
+}
+void analyze_print(card *card_pointer){
+  if (is_RoyalFlush(card_pointer))       
+    printf("Royal flush!");
+  else if (is_StraightFlush(card_pointer)) 
+    printf("Straight flush!");
+  else if (is_Four_of_a_Kind(card_pointer))         
+    printf("Four of a kind!");
+  else if (is_FullHouse(card_pointer))
+    printf("Full house!");
+  else if (is_Flush(card_pointer))
+    printf("Flush!");
+  else if (is_Straight(card_pointer))     
+    printf("Straight!");
+  else if (is_Three_of_a_Kind(card_pointer))
+    printf("Three of a kind!");
+  else if (Pairs(card_pointer) == 2)   
+    printf("Two Pair!");
+  else if (Pairs(card_pointer) == 1)   
+    printf("One Pair!");
+  else   
+    printf("High card!");
+  printf("\n");
 }

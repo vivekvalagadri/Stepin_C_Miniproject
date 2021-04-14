@@ -26,27 +26,37 @@ typedef struct card{
  */
 void get_Input(card *card_pointer);
 /**
- * @brief      Determines if duplicate cards are present.
+ * @brief      Determines whether the specified card pointer is royal flush.
  *
  * @param      card_pointer  The card pointer
- * @param[in]  rank          The rank
- * @param[in]  suit          The suit
  *
- * @return     True if duplicate, False otherwise.
+ * @return     True if the specified card pointer is royal flush, False otherwise.
  */
-int is_Duplicate(card *card_pointer,int rank ,int suit);
+int is_RoyalFlush(card *card_pointer);
 /**
- * @brief      returns the type of hand 
+ * @brief      Determines whether the specified card pointer is straight flush.
  *
  * @param      card_pointer  The card pointer
- * @param      royal_flush   The royal flush
- * @param      straight      The straight
- * @param      flush         The flush
- * @param      four          Four
- * @param      three         Three
- * @param      pairs         The pairs
+ *
+ * @return     True if the specified card pointer is straight flush, False otherwise.
  */
-void type_of_hand(card *card_pointer, int* royal_flush, int* straight, int* flush, int* four, int* three, int* pairs);
+int is_StraightFlush(card *card_pointer);
+/**
+ * @brief      Determines whether the specified card pointer is four of a kind.
+ *
+ * @param      card_pointer  The card pointer
+ *
+ * @return     True if the specified card pointer is four of a kind, False otherwise.
+ */
+int is_Four_of_a_Kind(card *card_pointer);
+/**
+ * @brief      Determines whether the specified card pointer is full house.
+ *
+ * @param      card_pointer  The card pointer
+ *
+ * @return     True if the specified card pointer is full house, False otherwise.
+ */
+int is_FullHouse(card *card_pointer);
 /**
  * @brief      Determines whether the specified card pointer is flush.
  *
@@ -54,7 +64,7 @@ void type_of_hand(card *card_pointer, int* royal_flush, int* straight, int* flus
  *
  * @return     True if the specified card pointer is flush, False otherwise.
  */
-int is_flush(card *card_pointer);
+int is_Flush(card *card_pointer);
 /**
  * @brief      Determines whether the specified card pointer is straight.
  *
@@ -62,23 +72,27 @@ int is_flush(card *card_pointer);
  *
  * @return     True if the specified card pointer is straight, False otherwise.
  */
-int is_straight(card *card_pointer);
+int is_Straight(card* card_pointer);
 /**
- * @brief      Counts the number of ranks.
+ * @brief      Determines whether the specified card pointer is three of a kind.
  *
- * @param      card_pointer   The card pointer
- * @param      ranks_in_hand  The ranks in hand
+ * @param      card_pointer  The card pointer
+ *
+ * @return     True if the specified card pointer is three of a kind, False otherwise.
  */
-void count_ranks(card *card_pointer, int ranks_in_hand[][2]);
+int is_Three_of_a_Kind(card *card_pointer);
 /**
- * @brief      Prints a result.
+ * @brief      Determines the number of pairs in the hand
  *
- * @param[in]  royal_flush  The royal flush
- * @param[in]  straight     The straight
- * @param[in]  flush        The flush
- * @param[in]  four         Four of a kind
- * @param[in]  three        Three of a Kind
- * @param[in]  pairs        Counts number of pairs pairs
+ * @param      card_pointer  The card pointer
+ *
+ * @return     the number of pairs in the hand
  */
-void print_result(int royal_flush, int straight, int flush, int four, int three, int pairs);
+int Pairs(card *card_pointer);
+/**
+ * @brief      Analyzes and Prints the best hand
+ *
+ * @param      card_pointer  The card pointer
+ */
+void analyze_print(card *card_pointer);
 #endif
