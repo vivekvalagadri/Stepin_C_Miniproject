@@ -61,7 +61,7 @@ void straight_flush_test(void){
 void four_ofa_kind_test(void){
 	//starihtflush with suit as clubs
 	card c1[5]={{1,3},{2,3},{3,3},{4,3},{1,7}};
-	TEST_ASSERT_EQUAL(1,is_StraightFlush(c1));
+	TEST_ASSERT_EQUAL(1,is_Four_of_a_Kind(c1));
 
 	
 }
@@ -90,5 +90,6 @@ int main(){
 	UNITY_BEGIN();
 	RUN_TEST(royal_flush_test,1);
 	RUN_TEST(straight_flush_test,2);
+	RUN_TEST(four_ofa_kind_test,3);
 	return UNITY_END();
 }
