@@ -27,4 +27,4 @@ This project has been ispired from the book C Programming: A Modern Approach, Se
 * Complete Reimplementation of all the functions/logic using concepts taught in StepIn
 	* Structures
 	* Pointers to Structures
-	* Dynamic Memory Allocation
+	* Dynamic Memory Allocation 
