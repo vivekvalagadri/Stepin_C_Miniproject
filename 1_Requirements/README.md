@@ -38,10 +38,15 @@ ID  | Description         								| Status(Implemented/Future)
 ##  Low level Requirements:
 ID  | Description             | Status(Implemented/Future)
 --  | ----------------------- | --------------------------
-`1` | get_Input() Fucntion    | Implemented
-`2` | is_Duplicate() Fucntion | Implemented
-`3` | type_of_hand() Fucntion | Implemented
-`4` | is_flush() Fucntion     | Implemented
-`5` | is_straight() Fucntion  | Implemented
-`6` | count_ranks() Fucntion  | Implemented
-`5` | print_result() Fucntion | Implemented
+`1` | get_Input() Fucntion    | Implemented ()
+`2` | is_RoyalFlush() Fucntion | Implemented
+`3` | is_StraightFlush() Fucntion | Implemented
+`4` | is_Four_of_a_Kind() Fucntion     | Implemented
+`5` | is_FullHouse() Fucntion  | Implemented
+`6` | is_Flush() Fucntion  | Implemented
+`7` | Pairs() Fucntion | Implemented
+`8` | analyze_print() Fucntion | Implemented
+
+#### Note:
+Logic of the get_Input() function and Pairs() function has been derived from the book.
+Rest all of the functions have been reimplemted using better logic and structure.
