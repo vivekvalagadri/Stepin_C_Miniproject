@@ -88,7 +88,7 @@ void high_card_test(void){
 }
 int main(){
 	UNITY_BEGIN();
-	RUN_TEST(royal_flush_test);
-	RUN_TEST(straight_flush_test);
+	RUN_TEST(royal_flush_test,1);
+	RUN_TEST(straight_flush_test,2);
 	return UNITY_END();
 }
