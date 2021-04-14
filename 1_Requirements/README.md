@@ -38,7 +38,7 @@ ID  | Description         								| Status(Implemented/Future)
 ##  Low level Requirements:
 ID  | Description             | Status(Implemented/Future)
 --  | ----------------------- | --------------------------
-`1` | get_Input() Fucntion    | Implemented ()
+`1` | get_Input() Fucntion    | Implemented
 `2` | is_RoyalFlush() Fucntion | Implemented
 `3` | is_StraightFlush() Fucntion | Implemented
 `4` | is_Four_of_a_Kind() Fucntion     | Implemented
