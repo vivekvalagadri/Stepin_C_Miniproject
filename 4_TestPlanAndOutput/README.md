@@ -16,8 +16,31 @@
 
 ## Table no: Low level test plan
 
-| **Test ID** | **Description**                                              | **Exp IN** | **Exp OUT** | **Actual Out** |**Type Of Test**  |    
-|-------------|--------------------------------------------------------------|------------|-------------|----------------|------------------|
-|  L_01       |--------------------------------------------------------------|  ------------|-------------|----------------|Requirement based |
-|  L_02       |--------------------------------------------------------------|  ------------|-------------|----------------|Scenario based    |
-|  L_03       |--------------------------------------------------------------|  ------------|-------------|----------------|Boundary based    |
+| **Test ID** | **Description**   | **Exp I/P** | **Exp O/P** | **Actual Out** | **Type Of Test** | 
+|-------------|-----------------  |-------------|-------------|----------------|------------------|
+|  L_01       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Boundary based|
+|  L_02       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c2))|card c2[5]={{2,14},{1,10},{3,11},{2,13},{4,12}}|1|1|Boundary based|
+
+|  L_11       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
+|  L_12       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
+
+|  L_21       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
+|  L_22       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
+
+|  L_31       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
+|  L_32       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
+
+|  L_41       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
+|  L_42       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
+
+|  L_51       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
+|  L_52       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
+
+|  L_61       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
+|  L_62       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
+
+|  L_71       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
+|  L_72       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
+
+|  L_81       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
+|  L_82       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Scenario based|
