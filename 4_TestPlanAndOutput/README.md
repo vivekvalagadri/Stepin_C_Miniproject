@@ -21,7 +21,7 @@
 |  L_01       |TEST_ASSERT_EQUAL(1,is_RoyalFlush(c1))|card c1[5]={{1,10},{1,11},{1,12},{1,13},{1,14}}|1|1|Boundary based|
 |  L_02       |TEST_ASSERT_EQUAL(0,is_RoyalFlush(c2))|card c2[5]={{2,14},{1,10},{3,11},{2,13},{4,12}}|0|0|Boundary based|
 |  L_11       |TEST_ASSERT_EQUAL(1,is_StraightFlush(c1))|card c1[5]={{1,3},{1,4},{1,5},{1,6},{1,7}}|1|1|Scenario based|
-|  L_12       |TEST_ASSERT_EQUAL(0,is_StraightFlush(c2))|card c2[5]={{2,9},{1,10},{3,11},{2,8},{4,12}}|0||Scenario based|
+|  L_12       |TEST_ASSERT_EQUAL(0,is_StraightFlush(c2))|card c2[5]={{2,9},{1,10},{3,11},{2,8},{4,12}}|0|0|Scenario based|
 |  L_21       |TEST_ASSERT_EQUAL(1,is_Four_of_a_Kind(c1))|card c1[5]={{1,3},{2,3},{3,3},{4,3},{1,7}}|1|1|Scenario based|
 |  L_22       |TEST_ASSERT_EQUAL(0,is_Four_of_a_Kind(c2))|card c2[5]={{1,3},{2,2},{3,4},{4,3},{1,7}}|0|0|Scenario based|
 |  L_31       |TEST_ASSERT_EQUAL(1,is_FullHouse(c1))|card c1[5]={{1,3},{2,3},{3,4},{4,4},{1,4}}|1|1|Scenario based|
