@@ -12,7 +12,7 @@
 |  H_06       |Straight |5 cards in order|1|1|Scenario based|
 |  H_07       |Three of a Kind |3 cards of the same rank and 2 any other|1|1|Scenario based|
 |  H_08       |Two Pair |2 pairs of any rank and 1 any other|1|1|Scenario based|
-|  H_00       |One Pair |1 pair of any rank and 3 any other|1|1|Scenario based|
+|  H_09       |One Pair |1 pair of any rank and 3 any other|1|1|Scenario based|
 
 ## Table no: Low level test plan
 
