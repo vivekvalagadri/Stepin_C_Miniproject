@@ -33,5 +33,8 @@ $(call FixPath,$(BIN)/poker.o):$(call FixPath,$(SRC)/poker.c) $(call FixPath,$(I
 test: $(call FixPath,$(BIN)/poker.o)
 	gcc $(call FixPath,$(TEST)/tests.c) $(call FixPath,$(SRC)/poker.c) $(call FixPath,$(UNITY)/unity.c)
 
+doc:
+	make -C documentation
+
 clean:
-	$(RM) *.$(EXEC) $(call FixPath,$(BIN)/*.o)
+	$(RM) *.$(EXEC) $(call FixPath,$(BIN)/*.o) 
